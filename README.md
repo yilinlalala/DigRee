@@ -18,13 +18,13 @@ Web server: https://www.lilab-ecust.cn/digree/
 
 Each sample is denoised jointly as a nucleotide sequence and a secondary-structure graph, while the prediction is steered towards a user-defined target value.
 
-This repository contains the sampling code and three trained checkpoints. Training code and datasets are not included.
+This repository contains the sampling code. The three trained checkpoints are published as release attachments and are not stored in Git. Training code and datasets are not included.
 
 ## Repository layout
 
 ```
 DigRee/
-├── checkpoints/                   # trained model weights (.ckpt)
+├── checkpoints/                   # place the downloaded .ckpt files here
 ├── configs/task_config/           # per-checkpoint sampling settings
 ├── src/
 │   ├── sample.py                  # command-line entry point
@@ -150,6 +150,24 @@ python sample.py \
 Sequences are generated in batches of 4. Runs with the same checkpoint, target value and seed reproduce the same sequences.
 
 ## Checkpoints
+
+The weight files are [v1.0 release](https://github.com/yilinlalala/DigRee/releases/tag/v1.0) attachments, not files in the Git tree. Download them and save each one as `checkpoints/<filename>`:
+
+- [DigRee_IRES_EIF3A_forhuman.ckpt](https://github.com/yilinlalala/DigRee/releases/download/v1.0/DigRee_IRES_EIF3A_forhuman.ckpt)
+- [DigRee_5UTR_EL.ckpt](https://github.com/yilinlalala/DigRee/releases/download/v1.0/DigRee_5UTR_EL.ckpt)
+- [DigRee_SECIS_SBP2.ckpt](https://github.com/yilinlalala/DigRee/releases/download/v1.0/DigRee_SECIS_SBP2.ckpt)
+
+```bash
+mkdir -p checkpoints
+curl -L -o checkpoints/DigRee_IRES_EIF3A_forhuman.ckpt \
+  https://github.com/yilinlalala/DigRee/releases/download/v1.0/DigRee_IRES_EIF3A_forhuman.ckpt
+curl -L -o checkpoints/DigRee_5UTR_EL.ckpt \
+  https://github.com/yilinlalala/DigRee/releases/download/v1.0/DigRee_5UTR_EL.ckpt
+curl -L -o checkpoints/DigRee_SECIS_SBP2.ckpt \
+  https://github.com/yilinlalala/DigRee/releases/download/v1.0/DigRee_SECIS_SBP2.ckpt
+```
+
+The sampler looks for them at `checkpoints/<name>.ckpt`.
 
 
 | Checkpoint                        | Task                      | Default target value |

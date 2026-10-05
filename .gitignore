@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Generated samples
+generated_samples*.txt
+generated_samples*.csv
+
+*.ckpt

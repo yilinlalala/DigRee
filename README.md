@@ -188,7 +188,7 @@ Everything else (sequence length distribution, nucleotide and base-pair marginal
 
 If you use DigRee, please cite:
 
-> [Authors]. [Title]. *[Journal]*. [Year].
+> Yilin Yan, Jie Li, Guangxu Zhang, LiLi Zhu, Jun Wang, Tianyu Wu, Meng Li, Peiru Zhao, Ziyi Zhou, Feng Qian, Lu Lu, Yang Tang, and Honglin Li. *De novo design of translational regulatory elements for RNA*. Manuscript under review.
 
 # License
 
